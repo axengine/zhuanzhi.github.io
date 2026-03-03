@@ -79,7 +79,7 @@ title: 首页 - 四川撰志文化发展有限公司
 <section id="products" style="background-color: #fff;">
     <div class="container">
         <h2 class="section-title">典型案例</h2>
-        <div class="gallery">
+        <div class="gallery grid-4">
             {% for product in site.data.products %}
             <div class="gallery-item">
                 <img src="{{ product.image | relative_url }}" alt="{{ product.name }}">
