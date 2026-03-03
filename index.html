@@ -1,197 +1,38 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>四川撰志文化发展有限公司 - 企业官方网站</title>
-    <style>
-        /* 基础样式 */
-        :root {
-            --primary-color: #a01a1a; /* 朱砂红 */
-            --text-color: #2c3e50; /* 深灰 */
-            --bg-color: #fcfcfc; /* 宣纸白 */
-            --secondary-color: #7f8c8d; /* 细灰 */
-        }
+---
+layout: default
+title: 首页 - 四川撰志文化发展有限公司
+---
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: "Noto Serif SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", serif;
-            color: var(--text-color);
-            line-height: 1.8;
-            background-color: var(--bg-color);
-        }
-
-        /* 布局 */
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* 导航 */
-        header {
-            padding: 40px 0;
-            text-align: center;
-            border-bottom: 1px solid #eee;
-        }
-
-        header h1 {
-            font-size: 2.2rem;
-            color: var(--primary-color);
-            letter-spacing: 4px;
-            font-weight: 700;
-        }
-
-        header p {
-            font-size: 0.9rem;
-            color: var(--secondary-color);
-            margin-top: 10px;
-            letter-spacing: 2px;
-        }
-
-        /* 企业简介 */
-        section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            margin-bottom: 40px;
-            text-align: center;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: "";
-            display: block;
-            width: 40px;
-            height: 3px;
-            background: var(--primary-color);
-            margin: 15px auto 0;
-        }
-
-        .intro-text {
-            font-size: 1.1rem;
-            text-indent: 2em;
-            text-align: justify;
-        }
-
-        /* 展品展示 */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .gallery-item {
-            background: #fff;
-            border: 1px solid #eee;
-            padding: 15px;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .gallery-item p {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 0.9rem;
-            color: var(--secondary-color);
-        }
-
-        /* 联系方式 */
-        .contact {
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-
-        .contact-info {
-            list-style: none;
-            padding: 20px 0;
-        }
-
-        .contact-info li {
-            margin: 10px 0;
-        }
-
-        /* 页脚 */
-        footer {
-            padding: 40px 0;
-            text-align: center;
-            font-size: 0.8rem;
-            color: #999;
-            border-top: 1px solid #eee;
-        }
-
-        /* 响应式适配 */
-        @media (max-width: 600px) {
-            header h1 { font-size: 1.5rem; }
-            section { padding: 40px 0; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="container">
-            <h1>四川撰志文化发展有限公司</h1>
-            <p>史料编研 · 文化交流 · 图文设计 · 文物修复</p>
+<section id="about">
+    <div class="container">
+        <h2 class="section-title">关于我们</h2>
+        <div class="intro-text">
+            {{ site.description | newline_to_br }}
         </div>
-    </header>
+    </div>
+</section>
 
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">关于我们</h2>
-            <div class="intro-text">
-                四川撰志文化发展有限公司立足文化艺术交流，致力于提供史料与史志编辑服务。我们深耕专业设计、图文制作及会议展览服务，同时在馆藏文物修复、复制与拓印领域拥有专业能力。我们坚持严谨、专业的态度，旨在传承历史文化，记录时代发展。
+<section id="products" style="background-color: #fff;">
+    <div class="container">
+        <h2 class="section-title">展品展示</h2>
+        <div class="gallery">
+            {% for product in site.data.products %}
+            <div class="gallery-item">
+                <img src="{{ product.image | relative_url }}" alt="{{ product.name }}">
+                <p>{{ product.name }}</p>
             </div>
+            {% endfor %}
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="products" style="background-color: #fff;">
-        <div class="container">
-            <h2 class="section-title">展品展示</h2>
-            <div class="gallery">
-                <div class="gallery-item">
-                    <img src="img/p1.jpg" alt="产品展示">
-                    <p>精品展示 01</p>
-                </div>
-                <!-- 预留更多展品位置 -->
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">联系我们</h2>
-            <ul class="contact-info">
-                <li><strong>办公地址：</strong> 四川省成都市 (详细地址待完善)</li>
-                <li><strong>咨询电话：</strong> (请完善联系电话)</li>
-                <li><strong>业务咨询：</strong> 专业设计 · 史志编辑 · 文物修复</li>
-            </ul>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            &copy; 2026 四川撰志文化发展有限公司 版权所有
-        </div>
-    </footer>
-
-</body>
-</html>
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">联系我们</h2>
+        <ul class="contact-info">
+            <li><strong>办公地址：</strong> {{ site.contact.address }}</li>
+            <li><strong>咨询电话：</strong> {{ site.contact.phone }}</li>
+            <li><strong>业务咨询：</strong> {{ site.contact.services }}</li>
+        </ul>
+    </div>
+</section>

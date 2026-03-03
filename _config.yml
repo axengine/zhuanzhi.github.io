@@ -1,0 +1,25 @@
+title: 四川撰志文化发展有限公司
+email: (请完善联系电话)
+description: >- # 用于 SEO
+  四川撰志文化发展有限公司立足文化艺术交流，致力于提供史料与史志编辑服务。
+  我们深耕专业设计、图文制作及会议展览服务，同时在馆藏文物修复、复制与拓印领域拥有专业能力。
+baseurl: "" # 如果你的项目名不是 username.github.io，这里需要填 /repository-name
+url: "https://zhuanzhi.github.io"
+
+# 社交/联系信息
+contact:
+  address: 四川省成都市 (详细地址待完善)
+  phone: (请完善联系电话)
+  services: 专业设计 · 史志编辑 · 文物修复
+
+# 构建设置
+markdown: kramdown
+theme: minima # 虽然我们用自定义样式，但保留配置
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

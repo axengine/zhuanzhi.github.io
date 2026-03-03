@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    <style>
+        /* 保持之前的精美样式 */
+        :root {
+            --primary-color: #a01a1a; /* 朱砂红 */
+            --text-color: #2c3e50; /* 深灰 */
+            --bg-color: #fcfcfc; /* 宣纸白 */
+            --secondary-color: #7f8c8d; /* 细灰 */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: "Noto Serif SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", serif;
+            color: var(--text-color);
+            line-height: 1.8;
+            background-color: var(--bg-color);
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+        header { padding: 40px 0; text-align: center; border-bottom: 1px solid #eee; }
+        header h1 { font-size: 2.2rem; color: var(--primary-color); letter-spacing: 4px; font-weight: 700; }
+        header p { font-size: 0.9rem; color: var(--secondary-color); margin-top: 10px; letter-spacing: 2px; }
+
+        section { padding: 80px 0; }
+        .section-title { font-size: 1.8rem; margin-bottom: 40px; text-align: center; position: relative; }
+        .section-title::after { content: ""; display: block; width: 40px; height: 3px; background: var(--primary-color); margin: 15px auto 0; }
+
+        .intro-text { font-size: 1.1rem; text-indent: 2em; text-align: justify; }
+
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .gallery-item { background: #fff; border: 1px solid #eee; padding: 15px; transition: transform 0.3s ease; }
+        .gallery-item:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .gallery-item img { width: 100%; height: auto; display: block; }
+        .gallery-item p { text-align: center; margin-top: 15px; font-size: 0.9rem; color: var(--secondary-color); }
+
+        .contact { background-color: #f4f4f4; text-align: center; }
+        .contact-info { list-style: none; padding: 20px 0; }
+        .contact-info li { margin: 10px 0; }
+
+        footer { padding: 40px 0; text-align: center; font-size: 0.8rem; color: #999; border-top: 1px solid #eee; }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.5rem; }
+            section { padding: 40px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>{{ site.title }}</h1>
+            <p>史料编研 · 文化交流 · 图文设计 · 文物修复</p>
+        </div>
+    </header>
+
+    {{ content }}
+
+    <footer>
+        <div class="container">
+            &copy; {{ site.time | date: '%Y' }} {{ site.title }} 版权所有
+        </div>
+    </footer>
+
+</body>
+</html>
