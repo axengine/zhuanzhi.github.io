@@ -1,6 +1,6 @@
 - name: 精品展示 01
-  image: ./img/p1.jpg
+  image: /img/p1.jpg
   description: 撰志文化史料编研成果展示
 - name: 精品展示 02
-  image: ./img/p1.jpg
+  image: /img/p1.jpg
   description: 第二个展品
