@@ -1,6 +1,15 @@
-- name: 精品展示 01
-  image: /img/p1.jpg
-  description: 撰志文化史料编研成果展示
-- name: 精品展示 02
-  image: /img/p1.jpg
-  description: 第二个展品
+- name: 江安县江安镇志 (2010)
+  image: /img/jiangan_liugengzhen_zhi_2010.png
+  description: 记录江安镇历史沿革与社会发展。
+- name: 南广镇志 (2017)
+  image: /img/nanguangzhen_zhi_2017.png
+  description: 宜宾市南广镇地方志编撰成果。
+- name: 留嘉镇志 (2017)
+  image: /img/liujiazhen_zhi_2017.png
+  description: 详尽记载留嘉镇地域文化与行业变迁。
+- name: 新桥镇志 (2019)
+  image: /img/xinqiaozhen_zhi_2019.jpg
+  description: 新桥镇综合性地方志书。
+- name: 团林苗族乡志
+  image: /img/tuanlin_miaozuxiang_zhi.png
+  description: 少数民族乡镇特色志书编纂。

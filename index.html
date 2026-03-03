@@ -3,29 +3,89 @@ layout: default
 title: 首页 - 四川撰志文化发展有限公司
 ---
 
+<!-- Hero Section -->
+<section id="hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('{{ '/img/jiangan_liugengzhen_zhi_2010.png' | relative_url }}') center/cover; color: white; padding: 120px 0; text-align: center;">
+    <div class="container">
+        <h2 style="font-size: 2.8rem; letter-spacing: 6px; margin-bottom: 20px;">深耕志书编撰 · 传承历史文脉</h2>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 2;">专业提供地方志、行业志、年鉴、扶贫志等编撰与研究服务，助力中华优秀传统文化传承与发展。</p>
+    </div>
+</section>
+
+<!-- About Us -->
 <section id="about">
     <div class="container">
-        <h2 class="section-title">关于我们</h2>
+        <h2 class="section-title">公司概况</h2>
         <div class="intro-text">
-            {{ site.description | newline_to_br }}
+            <p>四川撰志文化发展有限公司成立于2024年，位于四川宜宾，是一家专注于地方志、行业志、地方年鉴、扶贫志等文献编撰与文化研究的专业机构。公司以“存史、资政、育人”为宗旨，汇聚历史学、档案学、社会学等多领域专家，为政府、企事业单位及文化机构提供系统性、权威性、创新性的方志编撰服务。</p>
         </div>
     </div>
 </section>
 
+<!-- Services -->
+<section id="services" style="background-color: #f9f9f9;">
+    <div class="container">
+        <h2 class="section-title">主营业务</h2>
+        <div class="gallery" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+            <div class="gallery-item" style="padding: 30px; text-align: left;">
+                <h3 style="color: var(--primary-color); margin-bottom: 15px;">地方综合志书</h3>
+                <p style="font-size: 0.9rem;">承接省、市、县、乡四级地方志编修，涵盖地理、经济、政治、文化等全领域。</p>
+            </div>
+            <div class="gallery-item" style="padding: 30px; text-align: left;">
+                <h3 style="color: var(--primary-color); margin-bottom: 15px;">行业志与专题志</h3>
+                <p style="font-size: 0.9rem;">为教育、医疗、企业、家族等特定领域编撰专业志书，如企业发展史、部门教育志。</p>
+            </div>
+            <div class="gallery-item" style="padding: 30px; text-align: left;">
+                <h3 style="color: var(--primary-color); margin-bottom: 15px;">年鉴与地情文献</h3>
+                <p style="font-size: 0.9rem;">编纂年度综合年鉴、行业年鉴及地情丛书，记录时代发展脉络。</p>
+            </div>
+            <div class="gallery-item" style="padding: 30px; text-align: left;">
+                <h3 style="color: var(--primary-color); margin-bottom: 15px;">文态规划与出版</h3>
+                <p style="font-size: 0.9rem;">协助制定文化发展规划，并提供志书审校、设计、印刷与发行全链条服务。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team & Advantages -->
+<section id="advantages">
+    <div class="container">
+        <h2 class="section-title">核心优势</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px;">
+            <div>
+                <h3 style="border-left: 4px solid var(--primary-color); padding-left: 15px; margin-bottom: 20px;">专家领衔团队</h3>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><strong>刘仕雄：</strong> 资深方志顾问，深厚编撰底蕴。</li>
+                    <li><strong>邓学敏：</strong> 15年经验，主编志书20余部。</li>
+                    <li><strong>胡稀杰：</strong> 12年文字编纂经验，思维严谨。</li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="border-left: 4px solid var(--primary-color); padding-left: 15px; margin-bottom: 20px;">专业流程机制</h3>
+                <p>独创“三审三校+公众参与”机制，确保史料详实与文字严谨。与国家图书馆、中国社科院历史所等机构保持长期合作，具备全国档案调阅能力。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Products / Portfolio -->
 <section id="products" style="background-color: #fff;">
     <div class="container">
-        <h2 class="section-title">展品展示</h2>
+        <h2 class="section-title">典型案例</h2>
         <div class="gallery">
             {% for product in site.data.products %}
             <div class="gallery-item">
                 <img src="{{ product.image | relative_url }}" alt="{{ product.name }}">
-                <p>{{ product.name }}</p>
+                <div style="padding: 15px;">
+                    <h4 style="color: var(--primary-color);">{{ product.name }}</h4>
+                    <p style="font-size: 0.85rem; margin-top: 10px;">{{ product.description }}</p>
+                </div>
             </div>
             {% endfor %}
         </div>
     </div>
 </section>
 
+<!-- Contact Section -->
 <section id="contact" class="contact">
     <div class="container">
         <h2 class="section-title">联系我们</h2>
@@ -33,6 +93,7 @@ title: 首页 - 四川撰志文化发展有限公司
             <li><strong>办公地址：</strong> {{ site.contact.address }}</li>
             <li><strong>咨询电话：</strong> {{ site.contact.phone }}</li>
             <li><strong>业务咨询：</strong> {{ site.contact.services }}</li>
+            <li><strong>电子邮箱：</strong> {{ site.contact.email }}</li>
         </ul>
     </div>
 </section>
