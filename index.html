@@ -25,22 +25,30 @@ title: 首页 - 四川撰志文化发展有限公司
 <section id="services" style="background-color: #f9f9f9;">
     <div class="container">
         <h2 class="section-title">主营业务</h2>
-        <div class="gallery" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-            <div class="gallery-item" style="padding: 30px; text-align: left;">
-                <h3 style="color: var(--primary-color); margin-bottom: 15px;">地方综合志书</h3>
-                <p style="font-size: 0.9rem;">承接省、市、县、乡四级地方志编修，涵盖地理、经济、政治、文化等全领域。</p>
+        <div class="gallery grid-4">
+            <div class="gallery-item">
+                <div class="content">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">地方综合志书</h3>
+                    <p style="font-size: 0.9rem;">承接省、市、县、乡四级地方志编修，涵盖地理、经济、政治、文化等全领域。</p>
+                </div>
             </div>
-            <div class="gallery-item" style="padding: 30px; text-align: left;">
-                <h3 style="color: var(--primary-color); margin-bottom: 15px;">行业志与专题志</h3>
-                <p style="font-size: 0.9rem;">为教育、医疗、企业、家族等特定领域编撰专业志书，如企业发展史、部门教育志。</p>
+            <div class="gallery-item">
+                <div class="content">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">行业志与专题志</h3>
+                    <p style="font-size: 0.9rem;">为教育、医疗、企业、家族等特定领域编撰专业志书，如企业发展史、部门教育志。</p>
+                </div>
             </div>
-            <div class="gallery-item" style="padding: 30px; text-align: left;">
-                <h3 style="color: var(--primary-color); margin-bottom: 15px;">年鉴与地情文献</h3>
-                <p style="font-size: 0.9rem;">编纂年度综合年鉴、行业年鉴及地情丛书，记录时代发展脉络。</p>
+            <div class="gallery-item">
+                <div class="content">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">年鉴与地情文献</h3>
+                    <p style="font-size: 0.9rem;">编纂年度综合年鉴、行业年鉴及地情丛书，记录时代发展脉络。</p>
+                </div>
             </div>
-            <div class="gallery-item" style="padding: 30px; text-align: left;">
-                <h3 style="color: var(--primary-color); margin-bottom: 15px;">文态规划与出版</h3>
-                <p style="font-size: 0.9rem;">协助制定文化发展规划，并提供志书审校、设计、印刷与发行全链条服务。</p>
+            <div class="gallery-item">
+                <div class="content">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">文态规划与出版</h3>
+                    <p style="font-size: 0.9rem;">协助制定文化发展规划，并提供志书审校、设计、印刷与发行全链条服务。</p>
+                </div>
             </div>
         </div>
     </div>
@@ -75,7 +83,7 @@ title: 首页 - 四川撰志文化发展有限公司
             {% for product in site.data.products %}
             <div class="gallery-item">
                 <img src="{{ product.image | relative_url }}" alt="{{ product.name }}">
-                <div style="padding: 15px;">
+                <div class="content">
                     <h4 style="color: var(--primary-color);">{{ product.name }}</h4>
                     <p style="font-size: 0.85rem; margin-top: 10px;">{{ product.description }}</p>
                 </div>
