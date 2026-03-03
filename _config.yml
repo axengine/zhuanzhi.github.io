@@ -3,8 +3,8 @@ email: 13508191207@163.com
 description: >- # 用于 SEO
   四川撰志文化发展有限公司成立于2024年，位于四川宜宾，专注于地方志、行业志、地方年鉴、扶贫志等文献编撰与文化研究。
   公司以“存史、资政、育人”为宗旨，汇聚各领域专家，为政府、企事业单位提供系统性、权威性的方志编撰服务。
-baseurl: "/zhuanzhi.github.io" # 如果你的项目名不是 username.github.io，这里需要填 /repository-name
-url: "https://axengine.github.io"
+baseurl: "" # 使用自定义域名后，通常设为空
+url: "https://zhuanzhiwenhua.com"
 
 # 社交/联系信息
 contact:
